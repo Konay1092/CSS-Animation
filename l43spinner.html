@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spinner By css</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        background-color: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinnerone {
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+        border: 15px solid #f1f1f1;
+        border-top: 15px solid steelblue;
+        animation: myspinner 2s linear infinite;
+      }
+      .spinnertwo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 15px solid #f1f1f1;
+        border-top: 15px solid steelblue;
+        border-bottom: 15px solid deepskyblue;
+        animation: myspinner 1s linear infinite;
+      }
+      .spinnerthree {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 15px solid #f1f1f1;
+        border-top: 15px solid steelblue;
+        border-bottom: 15px solid deepskyblue;
+        border-left: 15px solid blue;
+        animation: myspinner 1s linear infinite;
+      }
+      .spinnerfour {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 15px solid #f1f1f1;
+        border-top: 15px solid steelblue;
+        border-bottom: 15px solid deepskyblue;
+        border-left: 15px solid blue;
+        border-right: 15px solid darkblue;
+
+        animation: myspinner 1s ease-in-out infinite;
+      }
+      @keyframes myspinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+
+        /* 0% {
+          transform: rotate(0deg);
+          
+        }
+        25% {
+          transform: rotate(45deg);
+           border-top: 15px solid steelblue;
+        }
+        50% {
+          transform: rotate(90deg);
+        }
+        75% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinnerone"></div>
+    <div class="spinnertwo"></div>
+    <div class="spinnerthree"></div>
+    <div class="spinnerfour"></div>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+	<style type="text/css">
+
+		*{
+			text-align: center;
+		}
+
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a{
+			display: block;
+
+			color: #000;
+			text-decoration: none;
+			font-size: 40px;
+
+			/*border: 5px solid #000;
+			border-radius: 15px;*/
+
+			clip-path: circle();
+
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			/*margin-bottom: 20px;*/
+		}
+
+		a::before{
+			content: "";
+
+			width: 100%;
+			height: 100%;
+			background-color: orangered;
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: rotate(-45deg);
+
+			/*transform-origin: center;	*/		/*default*/
+			/*transform-origin: top;*/
+			/*transform-origin: bottom;*/
+			/*transform-origin: left;*/
+			/*transform-origin: right;*/
+
+			/*transform-origin: left top;*/
+			transform-origin: left bottom;
+			/*transform-origin: right top;*/
+			/*transform-origin: right bottom;*/
+
+
+			z-index: -1;
+
+			transition: all 0.7s;
+		}
+		
+		a:hover::before{
+			transform: rotate(0deg);
+		}
+
+		.btn1{
+			background: none;
+			font-size: 40px;
+
+			border: none;
+
+			/*border: 5px solid black;
+			border-radius: 15px;*/
+
+			clip-path: ellipse();
+
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+		}
+
+		.btn1::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: blueviolet;
+
+			/*border-radius: 10px;*/
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: rotate(90deg);
+			transform-origin: right bottom;
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn1:hover::before{
+			transform: rotate(0deg);
+		}
+
+		.btn2{
+			background: none;
+			font-size: 40px;
+
+			border: none;
+			/*border: 5px solid black;
+			border-radius: 15px;*/
+
+			clip-path: polygon(0 32%, 33% 32%, 49% 1%, 68% 31%, 100% 31%, 78% 59%, 99% 99%, 52% 75%, 2% 100%, 26% 58%);
+
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+		}
+
+		.btn2::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: blueviolet;
+
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			/*transform: translate(100%);*/
+			/*transform: translateX(-100%);*/
+			/*transform: translateY(100%);*/
+			transform: translateY(-100%);
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn2:hover::before{
+			transform: translate(0%);
+		}
+
+		.btn3{
+			background: none;
+			font-size: 40px;
+
+			border: none;
+			/*border: 5px solid black;
+			border-radius: 15px;*/
+
+			clip-path: polygon(0% 77%, 0% 30%, 17% 41%, 60% 0, 100% 54%, 60% 100%, 18% 64%);
+
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+		}
+
+		.btn3::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: blueviolet;
+
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			/*transform: translate(100%,100%);*/
+			transform: translate(-100%,100%);
+			/*transform: translate(100%,-100%);*/
+			/*transform: translate(-100%,-100%);*/
+
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn3:hover::before{
+			/*transform: translate(0%);*/
+			transform: translate(0%,0%);
+
+			transform: translateX(0%) translateY(0%);
+		}
+
+	</style>
+</head>
+<body>
+
+	<!-- <div> -->
+		<a href="#">Hover Me</a>
+		<button type="button" class="btn1">Hover Me</button>
+		<button type="button" class="btn2">Hover Me</button>
+		<button type="button" class="btn3">Hover Me</button>
+	<!-- </div> -->
+
+</body>
+</html>

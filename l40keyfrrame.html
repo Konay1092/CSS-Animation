@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keyframe</title>
+
+    <style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: steelblue;
+        animation-name: myani;
+        animation-duration: 3s;
+        /* animation-fill-mode: forwards; */
+        /* animation-iteration-count: 3; */
+        /* animation-iteration-count: infinite; */
+        /* /* animation-timing-function: ease-in; */
+        animation-timing-function: ease;
+        /* animation-timing-function: ease-out; */
+        /* animation-direction: normal; */
+        /* animation-direction: reverse; */
+        /* animation-direction: alternate-reverse;
+        animation-iteration-count: infinite; */
+        /* animation-timing-function: linear; */
+        /* 
+        Animation short hand */
+        /*name duraction iteration-count ant  adir */
+        animation: myani 3s infinite linear alternate;
+      }
+      @keyframes myani {
+        0% {
+          transform: translate(0px);
+        }
+        50% {
+          transform: translate(700px);
+        }
+        100% {
+          transform: translate(500px, 500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <!-- <div class="form-check form-switch">
+      <input type="checkbox" class="form-check-input" id="darkSwitch" />
+      <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+    </div>
+    <script src="dark-mode-switch.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HomeWork 2</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+		}
+		
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		button{
+			background: steelblue;
+			font-size: 40px;
+			border: 3px solid #000;
+			border-radius: 15px;
+
+			padding: 40px 80px;
+
+			position: relative;
+			overflow: hidden;
+		}
+
+		button::before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: yellow;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			padding-right: 5px;
+
+			transition: transform 0.5s;
+
+		}
+
+		button:hover::before{
+			content: "Press";
+			justify-content: end;
+			transform: translate(-50%);
+		}
+
+		button::after{
+			content: "Hover Me";
+			width: 100%;
+			height: 100%;
+			background: steelblue;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			padding-left: 5px;
+
+			transition: transform 0.5s;
+		}
+
+		button:hover::after{
+			content: "Me";
+			justify-content: start;
+			transform: translate(50%);
+		}
+
+		button:active::after{
+			content: "You";
+		}
+
+		button:active::before{
+			content: "Thank";
+		}
+
+	</style>
+</head>
+
+<body>
+		<button>Hover Me</button>
+</body>
+
+</html>

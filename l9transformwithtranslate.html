@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with Translate</title>
+
+	<style type="text/css">
+		
+		.container{
+			width: 1000px;
+			background: grey;
+		}
+
+		.container .square{
+			width: 150px;
+			height: 60px;
+			background: red;
+			color: #fff;
+			font-size: 20ox;
+			padding: 10px 0;
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+
+		#translate:hover{
+			/*transform: translate(100%);*/
+
+			/*transform: translate(300px);*/
+			/*transform: translate(-100px);*/
+
+			transform: translate(-100%);
+		}
+
+		#translatex:hover{
+			/*transform: translateX(100px);*/
+			transform: translate(-100px);
+		}
+
+		#translatey:hover{
+			/*transform: translateY(200px);*/
+			transform: translateY(-150px);
+		}
+
+		#translatexy:hover{
+			/*transform: translate(100px,0);*/
+			/*transform: translate(100px, 100px);*/
+
+			/*transform: translate(100%,0);*/
+			/*transform: translate(-100px,100px);*/
+			/*transform: translate(100px,100px);*/
+			transform: translate(-100px,-100px);
+		}
+
+		img{
+			width: 300px;
+			display: block;
+			margin: auto;
+
+			transition: transform 1s;
+		}
+
+		img:hover{
+			/*transform: translate(300px);*/
+			/*transform: translate(-500px);*/
+
+			/*transform: translateX(-100%);*/
+			/*transform: translateY(100%);*/
+
+			/*transform: translate(-100%,-50%);*/
+			/*transform: translate(-100%,100%);*/
+
+			transform: translateX(-100%) translateY(100%);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="translate" class="square">Translate Me</div>
+	</div>
+
+	<div class="container">
+		<div id="translatex" class="square">Translate X</div>
+	</div>
+
+	<div class="container">
+		<div id="translatey" class="square">Translate Y</div>
+	</div>
+
+	<div class="container">
+		<div id="translatexy" class="square">Translate XY</div>
+	</div>
+<hr/>
+
+	<div>
+		<img src="./img/dog.jpg" alt="dog" />
+	</div>
+
+</body>
+</html>

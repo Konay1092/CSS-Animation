@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keyframe</title>  
+
+    <style type="text/css">
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: steelblue;
+
+            animation-name: myani;
+            animation-duration: 3s;
+            
+            animation-fill-mode: forwards;
+            /* animation-iteration-count: 3; */
+            animation-iteration-count: infinite;
+
+            /* animation-timing-function: ease; */
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-timing-function: linear; */
+
+            /* animation-direction: normal;
+            animation-direction: reverse;
+            animation-direction: normal;
+
+            animation-direction: alternate;
+            animation-direction: alternate-reverse; */
+
+            animation: myani 3s ease-in 0.5s 3 alternate forwards;
+
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+
+        @keyframes myani {
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(800px);
+            }
+            100%{
+                transform: translate(800px, 400px);
+            }
+        }
+        
+    </style>  
+</head>
+
+<body>
+
+    <div></div>
+    
+
+</body>
+</html>

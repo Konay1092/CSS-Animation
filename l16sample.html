@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+	<style type="text/css">
+
+		*{
+			text-align: center;
+			margin: 0;
+		}
+
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a{
+			display: block;
+
+			color: #000;
+			text-decoration: none;
+			font-size: 40px;
+			
+			border: 5px solid #000;
+			border-radius: 15px;
+
+			padding: 40px 80px;
+			margin-right: 5px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			transition: color 0.3s;
+
+			/*margin-bottom: 20px;*/
+		}
+
+		a::before{
+			content: "";
+
+			width: 100%;
+			height: 100%;
+
+			background-color: orangered;
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: rotate(-45deg);
+
+			/*transform-origin: center;	*/		/*default*/
+			/*transform-origin: top;*/
+			/*transform-origin: bottom;*/
+			/*transform-origin: left;*/
+			/*transform-origin: right;*/
+
+			/*transform-origin: left top;*/
+			transform-origin: left bottom;
+			/*transform-origin: right top;*/
+			/*transform-origin: right bottom;*/
+
+
+			z-index: -1;
+
+			transition: all 0.7s;
+		}
+
+		a:hover{
+			color: #fff;
+		}
+		
+		a:hover::before{
+			transform: rotate(0deg);
+		}
+
+	/*	a:active::before{
+			background: steelblue;
+		}*/
+
+		.btn1{
+			background: none;
+			font-size: 40px;
+			border: 5px solid black;
+			border-radius: 15px;
+
+			padding: 40px 80px;
+			margin-right: 5px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			transition: color 0.3s;
+		}
+
+		.btn1::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: blueviolet;
+
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: rotate(45deg);
+			transform-origin: right bottom;
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn1:hover{
+			color: #fff;
+		}
+
+		.btn1:hover::before{
+			transform: rotate(0deg);
+		}
+
+		/*.btn1:active::before{
+			background: steelblue;
+		}
+*/
+		.btn2{
+			background: none;
+			font-size: 40px;
+			border: 5px solid black;
+			border-radius: 15px;
+
+			padding: 40px 80px;
+			margin-right: 5px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			transition: color 0.3s;
+		}
+
+		.btn2::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: limegreen;
+
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			/*transform: translate(100%);*/
+			/*transform: translateX(-100%);*/
+			/*transform: translateY(100%);*/
+			transform: translateY(-100%);
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn2:hover{
+			color: #fff;
+		}
+
+		.btn2:hover::before{
+			transform: translate(0%);
+		}
+
+		/*.btn2:active::before{
+			background: steelblue;
+		}*/
+
+		.btn3{
+			background: none;
+			font-size: 40px;
+			border: 5px solid black;
+			border-radius: 15px;
+
+			padding: 40px 80px;
+			margin-right: 5px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			transition: color 0.3s;
+		}
+
+		.btn3::before{
+			content: "";
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			background: greenyellow;
+
+			border-radius: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			/*transform: translate(100%,100%);*/
+			transform: translate(-100%,100%);
+			/*transform: translate(100%,-100%);*/
+			/*transform: translate(-100%,-100%);*/
+
+
+			transition: all 0.7s;
+
+			z-index: -1;
+
+		}
+
+		.btn3:hover{
+			color: #fff;
+		}
+
+		.btn3:hover::before{
+			/*transform: translate(0%);*/
+			transform: translate(0%,0%);
+
+			transform: translateX(0%) translateY(0%);
+		}
+
+		a:active::before,.btn1:active::before, .btn2:active::before, .btn3:active::before{
+			background: steelblue;
+		}
+
+		a:active, .btn1:active, .btn2:active, .btn3:active{
+			box-shadow: 0px 5px 5px #666;
+			transform: translateY(4px);
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<!-- <div> -->
+		<a href="#">Hover Me</a>
+		<button type="button" class="btn1">Hover Me</button>
+		<button type="button" class="btn2">Hover Me</button>
+		<button type="button" class="btn3">Hover Me</button>
+	<!-- </div> -->
+
+</body>
+</html>
