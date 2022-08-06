@@ -22,6 +22,7 @@
         width: 100%;
         height: 100%;
         background-color: #000;
+        white-space: nowrap;
         position: absolute;
         top: 0;
         left: 0;
@@ -29,6 +30,17 @@
       .container div:nth-of-type(2) {
         width: 50%;
         background-color: steelblue;
+      }
+      .container div h1 {
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .container div:nth-of-type(2) h1 {
+        -webkit-text-stroke:1px;
+        -webkit-text-stroke-color:#fff;
+        color: transparent;
       }
     </style>
   </head>
