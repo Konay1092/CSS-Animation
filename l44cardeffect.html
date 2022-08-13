@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+
+		.card{
+			width: 320px;
+			background-color: white;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+			padding: 40px;
+
+			position: relative;
+
+			overflow: hidden;
+		}
+
+		.card::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: navy;
+
+			position: absolute;
+			bottom: calc(-100% + 5px);
+			left: 0;
+
+			transition: 0.5s;
+
+			z-index: 1;
+		}
+
+		.card:hover::before{
+			bottom: 0;
+		}
+
+		.content{
+			color: #777;
+			text-transform: capitalize;
+
+			position: relative;
+			z-index: 2;
+
+			transition: all 0.5s;
+		}
+
+		.content h2{
+			font-size: 30px;
+			margin-top: 0px;
+			margin-bottom: 12px;
+		}
+
+		.content p{
+			font-size: 18px;
+		}
+
+		.content a{
+			display: inline-block;
+			text-decoration: none;
+			background-color: #fff;
+			color: #777;
+			font-size: 14px;
+			box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+
+			padding: 6px 10px;
+			margin-top: 14px;
+		}
+
+		.card:hover .content{
+			color: #fff;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="card">
+		
+		<div class="content">
+			<h2>CSS Animation</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			<a href="#">Read More</a>
+		</div>
+
+	</div>
+
+</body>
+</html>

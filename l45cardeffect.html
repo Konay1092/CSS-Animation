@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.card{
+			width: 300px;
+			height: 400px;
+			background-color: #000;
+			box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+
+			position: relative;
+
+			overflow: hidden;
+		}
+
+		.content{
+			width: 80%;
+			height: 70px;
+			background-color: #fff;
+			text-align: center;
+
+			position: absolute;
+			bottom: 0;
+			left: 10%;
+
+			transition: all 0.5s;
+		}
+
+		.content h3{
+			font-size: 23px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.content p{
+			width: 80%;
+			font-size: 18px;
+			margin: 10px auto;
+
+			opacity: 0;
+
+			transition: all 0.5s;
+		}
+
+		.content a{
+			display: inline-block;
+			text-decoration: none;
+			background-color: #000;
+			color: #fff;
+			font-size: 14px;
+
+			padding: 10px 15px;
+			margin-top: 10px;
+
+			opacity: 0;
+
+			transition: all 0.5s;
+		}
+
+		.card:hover .content{
+			width: 100%;
+			height: 100%;
+			left: 0;
+		}
+
+		.card:hover p, .card:hover a{
+			opacity: 1;
+
+			transition-delay: 0.5s;
+		}
+
+		.imgbox{
+			width: 100%;
+			height: 100%;
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+
+			transition: all 0.5s;
+		}
+
+		.card:hover img{
+			opacity: 0;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="card">
+
+		<div class="imgbox">
+			<img src="img/menu.jpg" alt="menu" />
+		</div>
+
+		<div class="content">
+			<h3>Today Special</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+			<a href="#">Read More</a>
+		</div>
+
+	</div>
+
+</body>
+</html>

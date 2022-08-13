@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ani Effect</title>
+	<link href="fontawesomepro/css/all.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			background: #222;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.call{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			color: #fff;
+			border-radius: 50%;
+			font-size: 48px;
+			text-align: center;
+			line-height: 100px;
+
+			position: relative;
+		}
+
+		.call::before,.call::after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			/*background-color: red;*/
+			border-radius: 50%;
+			border: 1px solid green;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			box-sizing: border-box;
+
+			animation: myani 1.5s infinite linear;
+		}
+
+		.call::after{
+			animation-delay: 0.3s;
+		}
+
+		@keyframes myani{
+			0%{
+				transform: scale(0.5);
+				opacity: 0;
+			}
+
+			50%{
+				transform: scale(1.3);
+				opacity: 1;
+			}
+
+			100%{
+				transform: scale(1.8);
+				opacity: 0;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="call"><i class="fas fa-phone"></i></div>
+
+</body>
+</html>

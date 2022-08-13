@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			background-color: #333;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items:  center;
+
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.container{
+			width: 400px;
+			height: 400px;
+
+			border-radius: 10px;
+
+			overflow: hidden;
+
+			position: relative;
+		}
+
+		img{
+			width: 100%;
+
+		}
+
+		.container::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: #0985eb;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			opacity: 0.5;
+
+			transform: translateY(100%);
+			transition: all 0.25s;
+
+			transition-delay: 0.25s;
+		}
+
+		.container:hover::before{
+			transform: translateY(0%);
+			transition-delay: 0s;
+		}
+
+		.container .caption{
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			transform: translateY(-20px);
+			opacity: 0;
+			transition: all 0.25s;
+		}
+
+		.caption h3,.caption p{
+			color: #fff;
+			margin: 0;
+			letter-spacing: 1px;
+		}
+
+		.caption h3{
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+
+		.caption p{
+			text-transform: capitalize;
+			background-color: #bd6c40;
+		}
+
+		.container:hover .caption{
+			transform: translateY(0);
+			opacity: 1;
+			transition-delay: 0.3s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<img src="img/cat.jpg" alt="cat" />
+
+		<div class="caption">
+			<h3>How Sweet !</h3>
+			<p>This is css animation lesson for image card</p>
+		</div>
+	</div>
+
+</body>
+</html>

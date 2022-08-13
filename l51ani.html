@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyframe</title>
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+
+		}
+
+		div{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+
+			animation-name: myani;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+
+			/*animation-direction: normal;*/
+			/*animation-direction: reverse;*/
+
+			/*animation-iteration-count: infinite;*/
+			/*animation-direction: alternate;*/
+			/*animation-direction: alternate-reverse;*/
+
+			animation: myani 3s 2 linear alternate 2s;
+		}
+
+		@keyframes myani{
+			0%{
+				transform: translate(500px);
+			}
+
+			50%{
+				transform: translate(1000px) ;
+			}
+
+			100%{
+				transform: translate(1000px,500px);
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>

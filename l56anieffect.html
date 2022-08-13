@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ani Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			background-color: #222;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 40px;
+			border: 3px solid #fff;
+
+			padding: 40px 80px;
+
+			position: relative;
+
+			transition: all 0.3s;
+
+			overflow: hidden;
+		}
+
+		a::before{
+			content: '';
+			width: 120px;
+			height: 100%;
+			background-color: tomato;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			z-index: -1;
+
+			transform: skew(-15deg);
+
+			transition: 0.5s;
+			
+			animation: myani 1.2s linear infinite;
+		}
+
+		a:hover::before{
+			width: 100%;
+			transform: skew(0deg);
+			animation: none;
+		}
+
+		@keyframes myani{
+			from{
+				left: -120px;
+			}
+
+			to{
+				left: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<a href="#">Hover Me</a>
+
+</body>
+</html>

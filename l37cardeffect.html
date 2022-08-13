@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			background-color: #333;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 450px;
+			height: 300px;
+
+			position: relative;
+
+			overflow: hidden;	
+		}
+
+		img{
+			width: 100%;
+		}
+
+		.container::before{
+			content: '';
+			width: 120%;
+			height: 200%;
+			background-color: #444;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			opacity: 0.8;
+
+			transform: translate(500px,300px) rotate(45deg);
+
+			transition: all 0.25s;
+		}
+
+		.container:hover::before{
+			transform: translate(-50px,-150px) rotate(45deg);
+		}
+
+		.caption{
+			width: 100%;
+			height: 100%;
+
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+
+		.caption h2{
+			font-size: 17px;
+			background-color: rgba(0,0,0,0.7);
+			padding: 20px;
+
+			transform: translate(200px,-200px);
+
+			transition: all 0.25s;
+
+			transition-delay: 0.3s;
+		}
+
+		.container:hover h2{
+			transform: translate(0,0);
+		}
+
+		.container p{
+			width: 80%;
+			align-self: center;
+
+			transform: translate(-200px,200px);
+
+			transition: all 0.25s;
+		}
+
+		.container:hover p{
+			transform: translate(0,0);
+
+			transition-delay: 0.4s;
+		}
+
+		a{
+			width: 100px;
+			text-decoration: none;
+			background-color: #000;
+			color: #fff;
+			padding: 15px;
+			align-self: center;
+
+			transform: translateY(100px);
+			transition: all 0.25s;
+		}
+
+		.container:hover a{
+			transform: translateY(0);
+
+			transition-delay: 0.5s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<img src="img/webdep.jpg" alt="web" />
+
+		<div class="caption">
+			<h2>How Sweet !</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#">Read More</a>
+		</div>
+
+	</div>
+
+</body>
+</html>
